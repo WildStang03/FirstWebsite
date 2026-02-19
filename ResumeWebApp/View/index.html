@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ignacio Gutierrez resume page">
+    <title>Self Introduction</title>
+    <style>
+        :root {
+            --bg: #f5f7fb;
+            --surface: #ffffff;
+            --text: #1f2933;
+            --muted: #52606d;
+            --accent: #0b2fa8;
+            --accent-2: #0e7619;
+            --border: #d9e2ec;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        header {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+        }
+
+        h2 {
+            color: var(--accent-2);
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 12px;
+        }
+
+        .list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .list li {
+            margin-bottom: 6px;
+            transition: transform 0.2s ease;
+        }
+
+        .list li:hover {
+            transform: translateX(6px);
+        }
+
+        .list-check li::before {
+            content: "\2713 ";
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .list-star li::before {
+            content: "\2605 ";
+            color: #2c3e50;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent);
+        }
+
+        a:hover,
+        a:focus-visible {
+            text-decoration: underline;
+        }
+
+        ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        ol li {
+            margin-bottom: 8px;
+        }
+
+        .two-col {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .location-photo {
+            display: block;
+            width: min(360px, 100%);
+            height: auto;
+            margin-top: 10px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .dog-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .dog-button {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .dog-button:hover,
+        .dog-button:focus-visible {
+            transform: scale(1.03);
+        }
+
+        .dog-button.move {
+            transform: translateX(12px);
+        }
+
+        .dog-button img {
+            display: block;
+            width: min(200px, 100%);
+            height: auto;
+            border-radius: 8px;
+        }
+
+        audio {
+            width: min(320px, 100%);
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                padding: 14px;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            section,
+            header {
+                border: 1px solid #ccc;
+                box-shadow: none;
+                break-inside: avoid;
+            }
+
+            .dog-button {
+                border: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header>
+            <h1>Ignacio Gutierrez</h1>
+            <p>Computer Science Student</p>
+        </header>
+
+        <section>
+            <h2>Contact Info</h2>
+            <ul class="list list-check">
+                <li><a href="mailto:gutierrezi9604@uhcl.edu">gutierrezi9604@uhcl.edu</a></li>
+                <li><a href="https://www.linkedin.com/in/ignacio-gutierrez-209a5635a/" target="_blank" 
+                  rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p>
+                <a href="https://www.uhcl.edu" target="_blank" rel="noopener noreferrer">
+                    University of Houston - Clear Lake
+                </a>
+            </p>
+        </section>
+
+        <section class="two-col">
+            <div>
+                <h2>Skills</h2>
+                <ul class="list list-check">
+                    <li>Python</li>
+                    <li>HTML / CSS</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Software Experience</h2>
+                <ul class="list list-check">
+                    <li><a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">Microsoft Office</a></li>
+                    <li><a href="https://www.docker.com" target="_blank" rel="noopener noreferrer">Docker</a></li>
+                    <li>Windows 11</li>
+                    <li><a href="https://ubuntu.com" target="_blank" rel="noopener noreferrer">Ubuntu Server</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Career Goals</h2>
+            <ol>
+                <li>Obtain a software development internship</li>
+                <li>Graduate with a Bachelor's degree in Computer Science</li>
+                <li>Secure a full-time position as a software engineer</li>
+            </ol>
+        </section>
+
+        <section class="two-col">
+            <div>
+                <h2>Preferred State</h2>
+                <p>Texas</p>
+                <img class="location-photo" src="Texas.jpg" alt="Scenic view of Texas" loading="lazy">
+            </div>
+            <div>
+                <h2>Favorite City</h2>
+                <p>Houston</p>
+                <img class="location-photo" src="Houston.jpg" alt="Houston skyline" loading="lazy">
+            </div>
+        </section>
+
+        <section class="two-col">
+            <div>
+                <h2>Hobbies</h2>
+                <ul class="list list-star">
+                    <li>Home Lab</li>
+                    <li>Cars</li>
+                    <li>Fitness</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Countries Visited</h2>
+                <ul class="list list-check">
+                    <li>United States</li>
+                    <li>Mexico</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>My Favorite Scientist</h2>
+            <p>Isaac Newton</p>
+        </section>
+
+        <section>
+            <h2>Favorite Food</h2>
+            <ul class="list list-check">
+                <li>Pasta</li>
+                <li>Burgers</li>
+                <li>Tacos</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Favorite Movies</h2>
+            <ul class="list list-check">
+                <li><a href="https://www.imdb.com/title/tt0032138/" target="_blank" rel="noopener noreferrer">The Wizard of Oz</a></li>
+                <li><a href="https://www.imdb.com/title/tt0088763/" target="_blank" rel="noopener noreferrer">Back to the Future</a></li>
+                <li><a href="https://www.imdb.com/title/tt0993846/" target="_blank" rel="noopener noreferrer">The Wolf of Wall Street</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Interactive Dog</h2>
+            <div class="dog-wrap">
+                <button type="button" class="dog-button" id="dogButton" aria-label="Play dog sound">
+                    <img src="NerdDog.jpg" alt="Cartoon dog with glasses" width="200" height="200" loading="lazy">
+                </button>
+                <audio id="dogSound" src="NerdDogSpeak.mp3" controls preload="auto"></audio>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const dogButton = document.getElementById("dogButton");
+        const sound = document.getElementById("dogSound");
+
+        dogButton.addEventListener("click", () => {
+            sound.currentTime = 0;
+            sound.play().catch(() => {
+                // Controls are visible, so the user can start playback manually if blocked.
+            });
+
+            dogButton.classList.add("move");
+            setTimeout(() => {
+                dogButton.classList.remove("move");
+            }, 200);
+        });
+    </script>
+</body>
+</html>
